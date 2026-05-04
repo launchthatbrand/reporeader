@@ -41,7 +41,7 @@ const platformLinks = [
 
 export default function TemplateSidebar() {
   const pathname = usePathname();
-  const firstSegment = pathname.split("/").filter(Boolean)[0] ?? "";
+  const firstSegment = pathname.split("/").find((segment) => segment.length > 0) ?? "";
   const links = firstSegment === "admin" ? adminLinks : platformLinks;
   const groupLabel = firstSegment === "admin" ? "Admin" : "Platform";
 

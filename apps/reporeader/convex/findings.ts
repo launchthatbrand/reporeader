@@ -6,10 +6,11 @@ import {
   action,
   internalAction,
   internalMutation,
-  query,
-  type ActionCtx,
-  type MutationCtx,
+  query
+  
+  
 } from "./_generated/server";
+import type {ActionCtx, MutationCtx} from "./_generated/server";
 import { classifyAutomationError, shouldRetryTask } from "./automation/shared";
 import { vAutomationTaskKind } from "./workflowTypes";
 
@@ -52,7 +53,7 @@ interface RepoSignals {
   description?: string;
   primaryLanguage?: string;
   topics: string[];
-  topLanguages: Array<{ name: string; bytes: number }>;
+  topLanguages: { name: string; bytes: number }[];
   normalizedUrl: string;
 }
 
@@ -60,14 +61,14 @@ interface ClassificationOutcome {
   architectureTag: string;
   confidence: number;
   summary: string;
-  evidence: Array<{ signal: string; detail: string }>;
-  findings: Array<{
+  evidence: { signal: string; detail: string }[];
+  findings: {
     findingType: string;
     key: string;
     value: string;
     confidence: number;
-    evidence: Array<{ signal: string; detail: string }>;
-  }>;
+    evidence: { signal: string; detail: string }[];
+  }[];
   signalSnapshot: Record<string, unknown>;
 }
 
@@ -124,7 +125,7 @@ const inferArchitecture = (signals: RepoSignals): ClassificationOutcome => {
   const languageNames = signals.topLanguages.map((entry) => entry.name.toLowerCase());
   const description = signals.description?.toLowerCase() ?? "";
 
-  const evidence: Array<{ signal: string; detail: string }> = [];
+  const evidence: { signal: string; detail: string }[] = [];
   let architectureTag = "library_or_tooling";
   let confidence = 0.55;
 
@@ -229,13 +230,13 @@ const persistClassificationRows = async (
     evidenceJson: string;
     signalSnapshotJson: string;
     classifierVersion: number;
-    findings: Array<{
+    findings: {
       findingType: string;
       key: string;
       value: string;
       confidence: number;
       evidenceJson: string;
-    }>;
+    }[];
   },
 ) => {
   const now = Date.now();
@@ -584,7 +585,7 @@ export const getLatestRepoClassification = query({
       .order("desc")
       .take(1);
     const row = rows[0];
-    return row ?? null;
+    return row;
   },
 });
 

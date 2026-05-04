@@ -65,9 +65,10 @@ describe("findings classification pipeline", () => {
     });
 
     const classification = await t.query(api.findings.getLatestRepoClassification, { repoId });
-    expect(classification).not.toBeNull();
-    expect(classification?.architectureTag).toBe("web_application");
-    expect(classification?.confidence).toBeGreaterThanOrEqual(0.7);
+    expect(classification).toMatchObject({
+      architectureTag: "web_application",
+    });
+    expect(classification.confidence).toBeGreaterThanOrEqual(0.7);
 
     const findings = await t.query(api.findings.listRepoFindings, { repoId, limit: 10 });
     expect(findings.length).toBeGreaterThanOrEqual(2);

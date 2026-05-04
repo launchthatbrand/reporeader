@@ -48,7 +48,7 @@ export const BlogImage = ({
 export type BlogMarkdownImageProps = React.ImgHTMLAttributes<HTMLImageElement>;
 
 export const BlogMarkdownImage = ({ src, alt, title }: BlogMarkdownImageProps) => {
-  if (!src) {
+  if (typeof src !== "string" || src.length === 0) {
     return null;
   }
 

@@ -7,7 +7,7 @@ import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
 import { Geist } from "next/font/google";
 import { headers } from "next/headers";
 
-import { cn, ThemeProvider } from "@launchthatapp/ui";
+import { ThemeProvider } from "@launchthatapp/ui";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
@@ -58,10 +58,7 @@ export default async function RootLayout(props: {
                   header={showHeader ? props.header : null}
                   footer={props.footer}
                   showSidebar={showSidebar}
-                  className={cn(
-                    "rounded-3xl! shadow-[-12px_0_10px_-3px_rgba(0,0,0,0.3)] dark:shadow-[0_4px_6px_-1px_rgba(255,255,255,0.15),0_2px_4px_-2px_rgba(255,255,255,0.1)]",
-                    "ml-0!",
-                  )}
+                  className="rounded-3xl! shadow-[-12px_0_10px_-3px_rgba(0,0,0,0.3)] dark:shadow-[0_4px_6px_-1px_rgba(255,255,255,0.15),0_2px_4px_-2px_rgba(255,255,255,0.1)] ml-0!"
                   sidebarOpenOnHover={true}
                   // Admin and platform routes should start collapsed on initial load.
                   sidebarDefaultOpen={false}

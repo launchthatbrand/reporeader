@@ -61,8 +61,8 @@ export function RepoReaderNavUser() {
     );
   }
 
-  const name = viewer.name?.trim() || "RepoReader User";
-  const email = viewer.email?.trim() || "";
+  const name = viewer.name?.trim() ?? "RepoReader User";
+  const email = viewer.email?.trim() ?? "";
 
   return (
     <DropdownMenu>
