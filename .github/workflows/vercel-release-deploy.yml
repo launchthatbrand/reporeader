@@ -1,0 +1,76 @@
+name: Vercel Release Deploy
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: "Channel to deploy"
+        required: true
+        type: choice
+        options:
+          - stable
+          - beta
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve channel
+        id: resolve
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          INPUT_CHANNEL: ${{ github.event.inputs.channel }}
+        run: |
+          set -euo pipefail
+
+          channel=""
+
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            channel="$INPUT_CHANNEL"
+          else
+            # Release tag format: reporeader-<stable|beta>-v<semver>
+            # Examples:
+            # - reporeader-stable-v0.1.0
+            # - reporeader-beta-v0.2.0
+            if printf '%s\n' "$RELEASE_TAG" | grep -qE '^reporeader-(stable|beta)-v[0-9]'; then
+              channel="${RELEASE_TAG#reporeader-}"
+              channel="${channel%%-*}"
+            else
+              echo "Unsupported release tag format: $RELEASE_TAG"
+              echo "Expected: reporeader-<stable|beta>-v<semver>"
+              exit 1
+            fi
+          fi
+
+          case "$channel" in
+            stable|beta) ;;
+            *)
+              echo "Unsupported channel: $channel"
+              exit 1
+              ;;
+          esac
+
+          echo "channel=$channel" >> "$GITHUB_OUTPUT"
+          echo "Resolved deploy target: reporeader/$channel"
+
+      - name: Trigger reporeader stable
+        if: steps.resolve.outputs.channel == 'stable'
+        env:
+          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_REPOREADER_STABLE }}
+        run: |
+          test -n "$DEPLOY_HOOK" || { echo "Missing secret VERCEL_DEPLOY_HOOK_REPOREADER_STABLE"; exit 1; }
+          curl -fsS -X POST "$DEPLOY_HOOK"
+
+      - name: Trigger reporeader beta
+        if: steps.resolve.outputs.channel == 'beta'
+        env:
+          DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK_REPOREADER_BETA }}
+        run: |
+          test -n "$DEPLOY_HOOK" || { echo "Missing secret VERCEL_DEPLOY_HOOK_REPOREADER_BETA"; exit 1; }
+          curl -fsS -X POST "$DEPLOY_HOOK"
