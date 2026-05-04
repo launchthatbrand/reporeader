@@ -107,8 +107,8 @@ describe("repo intake integration", () => {
     const latestClassification = await t.query(api.findings.getLatestRepoClassification, {
       repoId,
     });
-    expect(latestClassification).not.toBeNull();
-    expect(latestClassification?.architectureTag.length).toBeGreaterThan(0);
+    expect(latestClassification).toBeTruthy();
+    expect(latestClassification.architectureTag.length).toBeGreaterThan(0);
 
     const telemetry = await t.query(api.workflowEngine.getWorkflowTelemetry, {
       repoId,

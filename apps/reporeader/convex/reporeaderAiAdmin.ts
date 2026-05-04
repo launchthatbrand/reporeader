@@ -19,6 +19,8 @@ export const getAiSettings = query({
     }),
   ),
   handler: async (ctx, args) => {
+    // Generated component refs are currently surfaced as an opaque type.
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     return (await ctx.runQuery(components.launchthat_ai.queries.getAiSettings, {
       key: args.key,
     })) as
@@ -52,6 +54,8 @@ export const saveAiSettings = mutation({
     model: v.string(),
   }),
   handler: async (ctx, args) => {
+    // Generated component refs are currently surfaced as an opaque type.
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     return (await ctx.runMutation(components.launchthat_ai.mutations.saveAiSettings, {
       key: args.key,
       provider: args.provider,

@@ -69,7 +69,7 @@ export default function RepoWorkflowDetailPage() {
     () => (runs ?? []).find((run) => String(run._id) === String(selectedRunId)),
     [runs, selectedRunId],
   );
-  const taskRows = (tasks ?? []) as Array<AutomationTaskRow>;
+  const taskRows = (tasks ?? []) as AutomationTaskRow[];
 
   const handleRetryRun = async (runId: Id<"workflowRuns">) => {
     try {

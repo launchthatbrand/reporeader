@@ -134,6 +134,6 @@ const contracts = [
 export const listAgentContracts = query({
   args: {},
   returns: v.array(agentContractValidator),
-  handler: async () => contracts.map((contract) => ({ ...contract })),
+  handler: () => contracts.map((contract) => ({ ...contract })),
 });
 

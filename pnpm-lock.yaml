@@ -333,10 +333,10 @@ importers:
         version: 0.4.6(convex-helpers@0.1.115(@standard-schema/spec@1.1.0)(convex@1.37.0(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)(typescript@5.9.3)(zod@4.1.12))(convex@1.37.0(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))
       '@launchthatapp/ai':
         specifier: 0.1.4
-        version: 0.1.4(27160a985d0b50028d1c3f61ed69d47f)
+        version: 0.1.4(d51c26e99bc66705b38e5db1fcf81938)
       '@launchthatapp/ui':
-        specifier: 0.1.11
-        version: 0.1.11(@types/mdast@4.0.4)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(@types/three@0.184.0)(expo-asset@12.0.9(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4))(expo-file-system@19.0.17(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4)))(expo@54.0.20)(micromark-util-types@2.0.2)(micromark@4.0.2)(react-dom@19.1.4(react@19.1.4))(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)(unified@11.0.5)(use-sync-external-store@1.6.0(react@19.1.4))(zod@4.1.12)
+        specifier: 0.1.13
+        version: 0.1.13(@types/mdast@4.0.4)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(@types/three@0.184.0)(expo-asset@12.0.9(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4))(expo-file-system@19.0.17(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4)))(expo@54.0.20)(micromark-util-types@2.0.2)(micromark@4.0.2)(react-dom@19.1.4(react@19.1.4))(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)(unified@11.0.5)(use-sync-external-store@1.6.0(react@19.1.4))(zod@4.1.12)
       '@mdx-js/mdx':
         specifier: ^3.1.1
         version: 3.1.1
@@ -2269,9 +2269,6 @@ packages:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
 
-  '@floating-ui/utils@0.2.10':
-    resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
-
   '@floating-ui/utils@0.2.11':
     resolution: {integrity: sha512-RiB/yIh78pcIxl6lLMG0CgBXAZ2Y0eVHqMPYugu+9U0AeT6YBeiJpf7lbdJNIugFP5SIjwNRgo4DhR1Qxi26Gg==}
 
@@ -2582,8 +2579,8 @@ packages:
       convex: ^1.34.0
       react: 19.0.0
 
-  '@launchthatapp/ui@0.1.11':
-    resolution: {integrity: sha512-legF4UvI1HJh1G+0Y76i1mb5sumF7cUQz7ylArQfPgP4qgu5drz1+ITJ0J22gw1L1HGvFqL5CaYrMUJ5bgIx1g==, tarball: https://npm.pkg.github.com/download/@launchthatapp/ui/0.1.11/af719d4400f072cb8c66adc8aca884aeaf21701a}
+  '@launchthatapp/ui@0.1.13':
+    resolution: {integrity: sha512-lsWHpVlO39V21QdysnY5f8getHM0TLcT62Xwxc0LUIF2oRWIIXkNbQ16NJogjmkP3f3moDe4lU5LkVhq0FFksg==, tarball: https://npm.pkg.github.com/download/@launchthatapp/ui/0.1.13/04472236f331dfff17bb5407ed446fe7193f2fb3}
     peerDependencies:
       react: ^19.0.0
       react-dom: ^19.0.0
@@ -11743,7 +11740,7 @@ snapshots:
   '@antfu/install-pkg@1.1.0':
     dependencies:
       package-manager-detector: 1.6.0
-      tinyexec: 1.0.1
+      tinyexec: 1.1.2
 
   '@ark/schema@0.46.0':
     dependencies:
@@ -13397,7 +13394,7 @@ snapshots:
 
   '@floating-ui/core@1.7.3':
     dependencies:
-      '@floating-ui/utils': 0.2.10
+      '@floating-ui/utils': 0.2.11
 
   '@floating-ui/core@1.7.5':
     dependencies:
@@ -13406,7 +13403,7 @@ snapshots:
   '@floating-ui/dom@1.7.4':
     dependencies:
       '@floating-ui/core': 1.7.3
-      '@floating-ui/utils': 0.2.10
+      '@floating-ui/utils': 0.2.11
 
   '@floating-ui/dom@1.7.6':
     dependencies:
@@ -13432,8 +13429,6 @@ snapshots:
       react: 19.1.4
       react-dom: 19.1.4(react@19.1.4)
       tabbable: 6.4.0
-
-  '@floating-ui/utils@0.2.10': {}
 
   '@floating-ui/utils@0.2.11': {}
 
@@ -13718,14 +13713,14 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@launchthatapp/ai@0.1.4(27160a985d0b50028d1c3f61ed69d47f)':
+  '@launchthatapp/ai@0.1.4(d51c26e99bc66705b38e5db1fcf81938)':
     dependencies:
       '@ai-sdk/google': 3.0.67(zod@4.1.12)
       '@ai-sdk/openai': 2.0.106(zod@4.1.12)
       '@convex-dev/agent': 0.3.2(@ai-sdk/provider-utils@4.0.26(zod@4.1.12))(ai@6.0.175(zod@4.1.12))(convex-helpers@0.1.115(@standard-schema/spec@1.1.0)(convex@1.37.0(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)(typescript@5.9.3)(zod@4.1.12))(convex@1.37.0(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)
       '@convex-dev/rag': 0.7.2(@convex-dev/workpool@0.4.6(convex-helpers@0.1.115(@standard-schema/spec@1.1.0)(convex@1.37.0(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)(typescript@5.9.3)(zod@4.1.12))(convex@1.37.0(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4)))(convex-helpers@0.1.115(@standard-schema/spec@1.1.0)(convex@1.37.0(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)(typescript@5.9.3)(zod@4.1.12))(convex@1.37.0(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(zod@4.1.12)
       '@launchthatapp/plugin-langfuse': 0.1.1(convex@1.37.0(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)
-      '@launchthatapp/ui': 0.1.11(@types/mdast@4.0.4)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(@types/three@0.184.0)(expo-asset@12.0.9(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4))(expo-file-system@19.0.17(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4)))(expo@54.0.20)(micromark-util-types@2.0.2)(micromark@4.0.2)(react-dom@19.1.4(react@19.1.4))(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)(unified@11.0.5)(use-sync-external-store@1.6.0(react@19.1.4))(zod@4.1.12)
+      '@launchthatapp/ui': 0.1.13(@types/mdast@4.0.4)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(@types/three@0.184.0)(expo-asset@12.0.9(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4))(expo-file-system@19.0.17(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4)))(expo@54.0.20)(micromark-util-types@2.0.2)(micromark@4.0.2)(react-dom@19.1.4(react@19.1.4))(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)(unified@11.0.5)(use-sync-external-store@1.6.0(react@19.1.4))(zod@4.1.12)
       '@radix-ui/react-collapsible': 1.1.12(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.4(react@19.1.4))(react@19.1.4)
       '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.4(react@19.1.4))(react@19.1.4)
       '@radix-ui/react-dropdown-menu': 2.1.16(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.4(react@19.1.4))(react@19.1.4)
@@ -13781,7 +13776,7 @@ snapshots:
       convex: 1.37.0(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4)
       react: 19.1.4
 
-  '@launchthatapp/ui@0.1.11(@types/mdast@4.0.4)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(@types/three@0.184.0)(expo-asset@12.0.9(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4))(expo-file-system@19.0.17(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4)))(expo@54.0.20)(micromark-util-types@2.0.2)(micromark@4.0.2)(react-dom@19.1.4(react@19.1.4))(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)(unified@11.0.5)(use-sync-external-store@1.6.0(react@19.1.4))(zod@4.1.12)':
+  '@launchthatapp/ui@0.1.13(@types/mdast@4.0.4)(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(@types/three@0.184.0)(expo-asset@12.0.9(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4))(expo-file-system@19.0.17(expo@54.0.20)(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4)))(expo@54.0.20)(micromark-util-types@2.0.2)(micromark@4.0.2)(react-dom@19.1.4(react@19.1.4))(react-native@0.82.0(@babel/core@7.28.5)(@types/react@19.1.12)(bufferutil@4.0.8)(react@19.1.4)(utf-8-validate@6.0.4))(react@19.1.4)(unified@11.0.5)(use-sync-external-store@1.6.0(react@19.1.4))(zod@4.1.12)':
     dependencies:
       '@dnd-kit/core': 6.3.1(react-dom@19.1.4(react@19.1.4))(react@19.1.4)
       '@dnd-kit/modifiers': 9.0.0(@dnd-kit/core@6.3.1(react-dom@19.1.4(react@19.1.4))(react@19.1.4))(react@19.1.4)
@@ -13858,7 +13853,7 @@ snapshots:
       shiki: 3.23.0
       sonner: 2.0.7(react-dom@19.1.4(react@19.1.4))(react@19.1.4)
       streamdown: 2.5.0(react-dom@19.1.4(react@19.1.4))(react@19.1.4)
-      tailwind-merge: 3.3.1
+      tailwind-merge: 3.5.0
       three: 0.165.0
       tokenlens: 1.3.1
       use-stick-to-bottom: 1.1.4(react@19.1.4)
@@ -17101,6 +17096,10 @@ snapshots:
     dependencies:
       acorn: 8.15.0
 
+  acorn-jsx@5.3.2(acorn@8.16.0):
+    dependencies:
+      acorn: 8.16.0
+
   acorn-walk@8.3.4:
     dependencies:
       acorn: 8.15.0
@@ -17856,7 +17855,7 @@ snapshots:
       '@radix-ui/react-compose-refs': 1.1.2(@types/react@19.1.12)(react@19.1.4)
       '@radix-ui/react-dialog': 1.1.15(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.4(react@19.1.4))(react@19.1.4)
       '@radix-ui/react-id': 1.1.1(@types/react@19.1.12)(react@19.1.4)
-      '@radix-ui/react-primitive': 2.1.3(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.4(react@19.1.4))(react@19.1.4)
+      '@radix-ui/react-primitive': 2.1.4(@types/react-dom@19.1.9(@types/react@19.1.12))(@types/react@19.1.12)(react-dom@19.1.4(react@19.1.4))(react@19.1.4)
       react: 19.1.4
       react-dom: 19.1.4(react@19.1.4)
     transitivePeerDependencies:
@@ -18388,7 +18387,7 @@ snapshots:
   dom-helpers@5.2.1:
     dependencies:
       '@babel/runtime': 7.28.4
-      csstype: 3.1.3
+      csstype: 3.2.3
 
   dom-serializer@2.0.0:
     dependencies:
@@ -18658,7 +18657,7 @@ snapshots:
   esast-util-from-js@2.0.1:
     dependencies:
       '@types/estree-jsx': 1.0.5
-      acorn: 8.15.0
+      acorn: 8.16.0
       esast-util-from-estree: 2.0.0
       vfile-message: 4.0.3
 
@@ -22806,8 +22805,8 @@ snapshots:
 
   react-jsx-parser@2.4.1(react-dom@19.1.4(react@19.1.4))(react@19.1.4):
     dependencies:
-      acorn: 8.15.0
-      acorn-jsx: 5.3.2(acorn@8.15.0)
+      acorn: 8.16.0
+      acorn-jsx: 5.3.2(acorn@8.16.0)
       react: 19.1.4
       react-dom: 19.1.4(react@19.1.4)
     optionalDependencies:
@@ -24031,7 +24030,7 @@ snapshots:
   terser@5.44.0:
     dependencies:
       '@jridgewell/source-map': 0.3.11
-      acorn: 8.15.0
+      acorn: 8.16.0
       commander: 2.20.3
       source-map-support: 0.5.21
 
@@ -24399,7 +24398,7 @@ snapshots:
   unplugin@2.3.10:
     dependencies:
       '@jridgewell/remapping': 2.3.5
-      acorn: 8.15.0
+      acorn: 8.16.0
       picomatch: 4.0.3
       webpack-virtual-modules: 0.6.2
 

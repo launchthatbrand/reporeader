@@ -189,7 +189,7 @@ export const claimNextAutomationTaskInternal = internalMutation({
   handler: async (ctx, args) => {
     const now = Date.now();
     const lockMs = clampLockMs(args.lockMs);
-    const statuses: Array<Doc<"automationTasks">["status"]> = [
+    const statuses: Doc<"automationTasks">["status"][] = [
       "queued",
       "retry_scheduled",
     ];
@@ -381,7 +381,7 @@ export const enqueueRepoClassificationTask = mutation({
   },
   returns: v.id("automationTasks"),
   handler: async (ctx, args): Promise<Id<"automationTasks">> => {
-    const sourceRun: Array<{ _id: Id<"workflowRuns"> }> = await ctx.runQuery(
+    const sourceRun: { _id: Id<"workflowRuns"> }[] = await ctx.runQuery(
       api.workflowEngine.listWorkflowRuns,
       {
       repoId: args.repoId,
